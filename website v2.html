@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyclomatic Complexity Calculator</title>
+</head>
+<body>
+    <h1>Cyclomatic Complexity Calculator</h1>
+
+    <!-- File Upload Section -->
+    <h2>Upload File</h2>
+    <input type="file" id="fileInput" accept=".js,.java,.py,.doc,.docx,.xml,.txt" onchange="handleFile()">
+    <div id="fileOutput"></div>
+
+    <!-- Or Paste Code Section -->
+    <h2>Paste Code</h2>
+    <textarea id="codeInput" rows="20" cols="50" style="overflow:scroll"></textarea>
+    <button onclick="calculateComplexity()">Calculate Complexity</button>
+    <div id="codeOutput"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
