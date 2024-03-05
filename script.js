@@ -29,7 +29,7 @@ function calculateCyclomaticComplexity(jscode) {
     // Iterate over line
     lines.forEach(line => {
         // Check if the line contains any decision points
-        if (line.includes('if') || line.includes('else') || line.includes('case') || line.includes('default') || line.includes('for') || line.includes('while') || line.includes('&&') || line.includes('||')) {
+        if (line.includes('if') || line.includes('else') || line.includes('case') || line.includes('default') || line.includes('for') || line.includes('while')) {
             complexity++;
         }
     });
