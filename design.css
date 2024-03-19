@@ -62,3 +62,16 @@ body {
   #button {
     width: 30%;
   }
+
+  #greenCc {
+    color: green;
+  }
+  #purpleCc {
+    color: purple;
+  }
+  #orangeCc {
+    color: orange;
+  }
+  #redCc {
+    color: red;
+  }

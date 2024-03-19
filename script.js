@@ -18,6 +18,19 @@ function calculateComplexity() {
     const code = document.getElementById('codeInput').value;
     const complexity = calculateCyclomaticComplexity(code);
     document.getElementById('codeOutput').innerHTML = `<p>Cyclomatic Complexity: ${complexity}</p>`;
+    const ccVar = document.getElementById('cc'); 
+    if (complexity <= 4) {
+        ccVar.style.color = 'green';
+    }
+    else if (complexity >= 5 && complexity <= 7) {
+        ccVar.style.color = 'purple';
+    }
+    else if (complexity >= 8 && complexity <= 10) {
+        ccVar.style.color = 'orange';
+    }
+    else if (complexity >= 11) {
+        ccVar.style.color = 'red';
+    }
 }
 
 function calculateCyclomaticComplexity(jscode) {
