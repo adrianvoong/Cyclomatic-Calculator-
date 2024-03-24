@@ -58,9 +58,21 @@ body {
   #codeOutput {
     /* Add styles for the code output here */
   }
+  #label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
 
   #button {
     width: 30%;
+    border: none; 
+    border-radius: 40px; 
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 15px 25px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   #greenCc {
