@@ -17,7 +17,7 @@ function handleFile() {
 function calculateComplexity() {
     const code = document.getElementById('codeInput').value;
     const complexity = calculateCyclomaticComplexity(code);
-    document.getElementById('codeOutput').innerHTML = `<p>Cyclomatic Complexity: ${complexity}</p>`;
+    document.getElementById('codeOutput').innerHTML = `<p id="cc">Cyclomatic Complexity: ${complexity}</p>`;
     const ccVar = document.getElementById('cc'); 
     if (complexity <= 4) {
         ccVar.style.color = 'green';
