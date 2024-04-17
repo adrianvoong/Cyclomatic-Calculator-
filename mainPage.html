@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyclomatic Complexity Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <img class="logo" src="cyclone.jpg" alt="logo">
+</head>
+<body>
+    <h1>Cyclomatic Complexity Calculator</h1>
+
+     <!-- Logout Button -->
+     <form action="loginPage.html" method="get">
+        <button type="submit">Logout</button>
+    </form>
+
+    <!-- File Upload Section -->
+    <h2>Upload File</h2>
+    <input type="file" id="fileInput" accept=".js,.java,.py,.doc,.docx,.xml,.txt" onchange="handleFile()">
+    <div id="fileOutput"></div>
+
+    <!-- Alternative Paste Code Section -->
+    <h2>Paste Code</h2>
+    <textarea id="codeInput" rows="20" cols="50" style="overflow:scroll"></textarea>
+    <button onclick="startCalculation()">Calculate Complexity</button>
+    <div id="codeOutput"></div>
+
+    <div id="ccKey">
+    <p>Cyclomatic Complexity Colour Key:<br></p>
+    <p id="greenCc">4 and lower - Easy to test<br></p>
+    <p id="purpleCc">5-7 - Tolerable<br></p>
+    <p id="orangeCc">8-10 - Refactoring should be considered<br></p>
+    <p id="redCc">11 and over - Difficult to test</p>
+    </div>
+
+    <div id="loggedIn" hidden></div>
+    <script src="script.js"></script>
+</body>
+</html>

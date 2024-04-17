@@ -14,7 +14,7 @@ function handleFile() {
     reader.readAsText(file);
 }
 
-function calculateComplexity() {
+function startCalculation() {
     const code = document.getElementById('codeInput').value;
     const complexity = calculateCyclomaticComplexity(code);
     document.getElementById('codeOutput').innerHTML = `<p id="cc">Cyclomatic Complexity: ${complexity}</p>`;
@@ -42,10 +42,20 @@ function calculateCyclomaticComplexity(jscode) {
     // Iterate over line
     lines.forEach(line => {
         // Check if the line contains any decision points
-        if (line.includes('if') || line.includes('else') || line.includes('case') || line.includes('default') || line.includes('for') || line.includes('while') || line.includes('&&') || line.includes('||')) {
+        if (line.includes('if') || line.includes('else') || line.includes('case') || line.includes('default') 
+            || line.includes('for') || line.includes('while') || line.includes('&&') || line.includes('||')) {
             complexity++;
         }
     });
 
     return complexity;
 }
+
+if (localStorage.getItem("loginConfirmed")) {
+    localStorage.removeItem("loginConfirmed");
+    document.getElementById("loggedIn").innerHTML = "Confirmed";
+}
+else if (document.getElementById("loggedIn").innerHTML == "") {
+    window.location.href = "loginPage.html";
+}
+else {}
